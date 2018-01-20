@@ -5,59 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dan Marrinan</title>
+    <title>Document</title>
+
+    <!-- Theme -->
+    <link rel="stylesheet" href="simplex_bootstrap.min.css">
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
-<body>
-    <h1>Dan Marrinan</h1>
-    <img src="dan_marrinan.jpg" alt="Dan Marrinan" width="300" height="415">
-    <p>
-            Data Analyst with experience working on challenging, collaborative, multidisciplinary projects with a wide range of applications. 
-            My degree in Engineering Physics from The Ohio State University gave me a broad background in math and science and taught me problem-solving skills that can be applied to almost any situation.
-    </p>
+<body class="body_style">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="index.html">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="navbar_right_side">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Plots
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="visualizations\temp.html">Temperature</a>
+                            <a class="dropdown-item" href="visualizations\humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="visualizations\cloud_cover.html">Cloud Cover</a>
+                            <a class="dropdown-item" href="visualizations\wind_speed.html">Wind Speed</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparisons.html">Comparisons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="data.html">Data</a>
+                    </li>
+                </ul>
+            </div>
 
-    <p>
-            During my tenure working at the Air Force Research Laboratory and Booz Allen Hamilton I developed numerical models, analyzed large data sets, performed complex curve fitting and to built data visualization GUIs. 
-            Gaining such robust experiences helped me to develop technical and communication skills along with the ability to work collaboratively as part of a technical team. 
-            Currently expanding my knowledge and skill sets of data analytics and visualizations with more relevant technologies for business. 
-            Looking for opportunities on a collaborative, curious, and committed team to tackle challenging, multidisciplinary problems.
-    </p>
+        </div>
+    </nav>
+    <div class="container-fluid main_container">
+        <div class="row main_row">
+            <div class="col-md-1"></div>
+            <div class="col-md-6 bg-light summary_column">
+                <h1>Summary: Latitude vs. X</h1>
+                <img src="temperature_vs_latitude.png" alt="Temp vs. Latitude">
+                <p>
+                    The purpose of this project was to see how weather changes with latitude
+                </p>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3 bg-light visualization_column">
+                <h1>Visualizations</h1>
+                <div class="row">
+                    <div class="col-3 col-sm-3 col-md-6 col-lg-6 image_column">
+                        <img class="visualization" src="temperature_vs_latitude.png" alt="Temp vs. Latitude">
+                    </div>
+                    <div class="col-3 col-sm-3 col-md-6 col-lg-6 image_column">
+                        <img class="visualization" src="temperature_vs_latitude.png" alt="Temp vs. Latitude">
+                    </div>
+                    <div class="col-3 col-sm-3 col-md-6 col-lg-6 image_column">
+                        <img class="visualization" src="temperature_vs_latitude.png" alt="Temp vs. Latitude">
+                    </div>
+                    <div class="col-3 col-sm-3 col-md-6 col-lg-6 image_column">
+                        <img class="visualization" src="temperature_vs_latitude.png" alt="Temp vs. Latitude">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
 
-    <ul>
-        <li>
-            <strong>Linkedin:</strong>
-            <a href="https://www.linkedin.com/in/danmarrinan/">https://www.linkedin.com/in/danmarrinan/</a>
-        </li>
-        <li>
-            <strong>GitHub:</strong>
-            <a href="https://github.com/dmarrinan">https://github.com/dmarrinan</a>
-        </li>
-        <li>
-            <strong>Gmail:</strong>
-            dan.marrinan@gmail.com
-        </li>
-    </ul>
-
-    <table border="1">
-        <thead>
-            <tr>
-                <th colspan="3">Favorite Movies</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Title</th>
-                <th>Year</th>
-                <th>Director</th>
-            </tr>
-            <tr>
-                <td>Fellowship of the Ring</td>
-                <td>2001</td>
-                <td>Peter Jackson</td>
-            </tr>
-        </tbody>
-    </table>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
