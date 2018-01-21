@@ -41,6 +41,10 @@
     margin: 0px;
 }
 
+.table_container{
+    white-space: nowrap;
+}
+
 .main_visualization{
     float: left;
 }
