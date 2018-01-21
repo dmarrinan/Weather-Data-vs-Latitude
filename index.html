@@ -15,7 +15,7 @@
 </head>
 
 <body class="body_style">
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="index.html">Latitude</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -24,15 +24,15 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <div class="navbar_right_side">
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Plots
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="visualizations\temp.html">Temperature</a>
-                            <a class="dropdown-item" href="visualizations\humidity.html">Humidity</a>
-                            <a class="dropdown-item" href="visualizations\cloud_cover.html">Cloud Cover</a>
-                            <a class="dropdown-item" href="visualizations\wind_speed.html">Wind Speed</a>
+                        <div class="dropdown-menu bg-primary drop_down" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item drop_down" href="visualizations\temp.html">Temperature</a>
+                            <a class="dropdown-item drop_down" href="visualizations\humidity.html">Humidity</a>
+                            <a class="dropdown-item drop_down" href="visualizations\cloud_cover.html">Cloud Cover</a>
+                            <a class="dropdown-item drop_down" href="visualizations\wind_speed.html">Wind Speed</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -46,35 +46,58 @@
 
         </div>
     </nav>
-    <div class="container-fluid main_container">
-        <div class="row main_row">
-            <div class="col-md-1"></div>
-            <div class="col-md-6 bg-light summary_column">
-                <h1>Summary: Latitude vs. X</h1>
-                <img src="temperature_vs_latitude.png" alt="Temp vs. Latitude">
-                <p>
-                    The purpose of this project was to see how weather changes with latitude
-                </p>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-3 bg-light visualization_column">
-                <h1>Visualizations</h1>
-                <div class="row">
-                    <div class="col-3 col-sm-3 col-md-6 col-lg-6 image_column">
-                        <img class="visualization" src="temperature_vs_latitude.png" alt="Temp vs. Latitude">
-                    </div>
-                    <div class="col-3 col-sm-3 col-md-6 col-lg-6 image_column">
-                        <img class="visualization" src="temperature_vs_latitude.png" alt="Temp vs. Latitude">
-                    </div>
-                    <div class="col-3 col-sm-3 col-md-6 col-lg-6 image_column">
-                        <img class="visualization" src="temperature_vs_latitude.png" alt="Temp vs. Latitude">
-                    </div>
-                    <div class="col-3 col-sm-3 col-md-6 col-lg-6 image_column">
-                        <img class="visualization" src="temperature_vs_latitude.png" alt="Temp vs. Latitude">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 column">
+                <div class="jumbotron bg-light summary_container">
+                    <h1>Summary: Latitude vs. X</h1>
+                    <hr>
+                    <div class="clearfix">
+                        <img class="visualization main_visualization" src="images/temperature_vs_latitude.png" alt="Temp vs. Latitude">
+                        <p>
+                            The purpose of this project was to see how weather changes with latitude. First, a large number of random numbers were generated
+                            to form coordinate pairs. All coordinates that did fall on land were discarded using google's
+                            timezone api. Next the citipy python library was used to find the nearest city to each randomly
+                            generated coordinate pair. The open weather map api was then used to find the current temperature,
+                            humidity, cloud cover, and wind speed for each city.
+                        </p>
+                        <p>
+                            Each of these parameters was plotted against the cities latitude to see how temperature varies with distance from the equator.
+                            2500 random coordinate pairs were used to find over 500 cities to perform this analyses. The
+                            data and visualizations from this analysis can be found on this site. Click on any of the images
+                            on the right to see more analysis.
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-1"></div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <div class="jumbotron bg-light visualization_container">
+                    <h1>Visualizations</h1>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 col-sm-3 col-md-6 col-lg-6 image_column">
+                            <a href="visualizations/temp.html">
+                                <img class="visualization" src="images/temperature_vs_latitude.png" alt="Temp vs. Latitude">
+                            </a>
+                        </div>
+                        <div class="col-3 col-sm-3 col-md-6 col-lg-6 image_column">
+                            <a href="visualizations/humidity.html">
+                                <img class="visualization" src="images/humidity_vs_latitude.png" alt="Humidity vs. Latitude">
+                            </a>
+                        </div>
+                        <div class="col-3 col-sm-3 col-md-6 col-lg-6 image_column">
+                            <a href="visualizations/cloud_cover.html">
+                                <img class="visualization" src="images/cloud_cover_vs_latitude.png" alt="Cloud Cover vs. Latitude">
+                            </a>
+                        </div>
+                        <div class="col-3 col-sm-3 col-md-6 col-lg-6 image_column">
+                            <a href="visualizations/wind_speed.html">
+                                <img class="visualization" src="images/wind_speed_vs_latitude.png" alt="Wind Speed vs. Latitude">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
