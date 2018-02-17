@@ -8,7 +8,9 @@ Each of these parameters was plotted against the cities latitude to see how temp
 ## Requirements
 This notebook requires python to be installed. Python 3.6.2 was used during development. The pandas library used to store, manipulate, filter, merge and perform calculations with the data. The matplotlib and numpy libraries were used to generate the plots showing the trends of various parameters versus latitude. The citipy library was used to get the coordinate pairs used to call openweathermap api. The requests library was used to make the actual calls to the openweathermap api. The jupyter library was used to execute the python code and display results.
 All required libraries can be found in requirements.txt and installed with the following command: <br/>
+<br/>
 `pip install requirements.txt -r` <br/>
+<br/>
 You will also need to create a config.py file with variables containing the variables google_key and weather_key containing your api keys for google maps and openweatherapi.
 
 ## Running the Code
@@ -17,7 +19,7 @@ To run the notebook enter the following into the command line:
 Open up the weather_data_vs_latitude.ipynb notebook in your browser and then click the 'Kernal' and the 'Restart and run all option'
 
 ## Results
-
+All of the results can be seen at the following link: https://dmarrinan.github.io/Weather-Data-vs-Latitude/index.html
 
 ```python
 #import dependencies
