@@ -1,6 +1,23 @@
+# Weather Data vs Latitude
+
+## Purpose
 The purpose of this project was to see how weather changes with latitude. First, a large number of random numbers were generated to form coordinate pairs. All coordinates that did fall on land were discarded using google's timezone api. Next the citipy python library was used to find the nearest city to each randomly generated coordinate pair. The open weather map api was then used to find the current temperature, humidity, cloud cover, and wind speed for each city.
 
 Each of these parameters was plotted against the cities latitude to see how temperature varies with distance from the equator. 2500 random coordinate pairs were used to find over 500 cities to perform this analyses. The data and visualizations from this analysis can be found on this site. Click on any of the images on the right to see more analysis.
+
+## Requirements
+This notebook requires python to be installed. Python 3.6.2 was used during development. The pandas library used to store, manipulate, filter, merge and perform calculations with the data. The matplotlib and numpy libraries were used to generate the plots showing the trends of various parameters versus latitude. The citipy library was used to get the coordinate pairs used to call openweathermap api. The requests library was used to make the actual calls to the openweathermap api. The jupyter library was used to execute the python code and display results.
+All required libraries can be found in requirements.txt and installed with the following command: <br/>
+`pip install requirements.txt -r` <br/>
+You will also need to create a config.py file with variables containing the variables google_key and weather_key containing your api keys for google maps and openweatherapi.
+
+## Running the Code
+To run the notebook enter the following into the command line: 
+`$ jupyter notebook`
+Open up the weather_data_vs_latitude.ipynb notebook in your browser and then click the 'Kernal' and the 'Restart and run all option'
+
+## Results
+
 
 ```python
 #import dependencies
@@ -143,7 +160,7 @@ plt.show()
 ```
 
 
-![png](coordinates_after_filter.png)
+![png](images/coordinates_after_filter.png)
 
 
 ```python
@@ -556,7 +573,7 @@ plt.show()
 ```
 
 
-![png](humidity_vs_latitude.png)
+![png](images/humidity_vs_latitude.png)
 
 
 
@@ -571,7 +588,7 @@ plt.show()
 ```
 
 
-![png](temperature_vs_latitude.png)
+![png](images/temperature_vs_latitude.png)
 
 
 
@@ -586,7 +603,7 @@ plt.show()
 ```
 
 
-![png](cloud_cover_vs_latitude.png)
+![png](images/cloud_cover_vs_latitude.png)
 
 
 
@@ -601,16 +618,7 @@ plt.show()
 ```
 
 
-![png](wind_speed_vs_latitude.png)
-
-
-## Observable Trends
-
-1) A greater range of latitiudes are sampled for the northern hemisphere than the souther hemisphere because we have settled more cities near the north pole.
-
-2) The percent cloud cover versus latitude appears to be random in nature.
-
-3) Wind speed versus Latitude appears to have more extreme outliers than the other plots displayed
+![png](images/wind_speed_vs_latitude.png)
 
 
 ```python
@@ -624,5 +632,18 @@ plt.show()
 ```
 
 
-![png](cities_sampled.png)
+![png](images/cities_sampled.png)
+
+
+## Observable Trends
+
+1) Temperature seems to vary linearly with latitude. The slope seems to be steeper for the northern hemisphere. This most likely occurred because this analysis was done in Novemeber when it would be winter for the northern hemisphere and summer for the southern hemisphere. It would be interesting to do this analysis with averages for the whole year to see if this trend was still seen.
+
+One can also see from this plot that there are more cities closer to the poles in the southern hemisphere to get data from because of the difference in land area near the north pole vs the south pole.
+
+2) Humidity seems to be very weakly coorelated with latitude as there are two relative minimums around 20 degrees away from the equator. It is interesting that there is an inflection point around the equator. There is not a strong enough correlation to tell if this is a true trend or just an artifact of the random coordinate chosen. More analysis would need to be done to explore this relationship further.
+
+3) The percent cloud cover appears to be complete random with respect to latitude. This means that most likely cloud cover most likely is not significantly correlated with temperature.
+
+4) In general wind speed seems to be fairly random with respect to latitude, although it does appear that the largest outliers occur near the poles. More data would be needed to make further conclusions about this relationship.
 
